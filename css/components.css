@@ -38,6 +38,25 @@
   color: inherit;
 }
 
+.btn--white {
+  background: #ffffff;
+  color: var(--color-dark);
+}
+
+.btn--white:hover {
+  background: #f0f0f0;
+}
+
+.btn--outline-light {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.btn--outline-light:hover {
+  border-color: #ffffff;
+}
+
 .btn--accent {
   background: var(--color-dark);
   color: #ffffff;

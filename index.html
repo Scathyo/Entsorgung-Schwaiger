@@ -13,161 +13,191 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a class="brand" href="index.html">
-        <svg class="brand__mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="4" y="4" width="40" height="40" rx="10" fill="#e6621a"/>
-          <path d="M17 18h14l-1.4 16.2a2 2 0 0 1-2 1.8H20.4a2 2 0 0 1-2-1.8L17 18Z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
-          <path d="M15 18h18M20 18v-2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M21 22v9M27 22v9" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        Schwaiger Entsorgung
+  <div class="app-shell">
+    <nav class="side-nav" data-nav data-open="false" aria-label="Hauptnavigation">
+      <a class="side-nav__logo" href="index.html" aria-label="Schwaiger Entsorgung – Start">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 7h12l-1.2 13.2A2 2 0 0 1 14.8 22H9.2a2 2 0 0 1-2-1.8L6 7Z" stroke="#fff" stroke-width="1.9" stroke-linejoin="round"/><path d="M4 7h16M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/></svg>
       </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="side-nav-list">
+        <span class="visually-hidden">Menü öffnen</span>
+        ☰
+      </button>
+      <ul class="side-nav__list" id="side-nav-list">
+          <li><a href="index.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 4l8 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span class="side-nav__tooltip">Start</span></a></li>
+          <li><a href="ueber-uns.html"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.8"/><path d="M5 20c1.2-4 4-6 7-6s5.8 2 7 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="side-nav__tooltip">Über uns</span></a></li>
+          <li><a href="leistungen.html"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="12" rx="1.5" stroke="currentColor" stroke-width="1.8"/><path d="M7 7V5.5A1.5 1.5 0 0 1 8.5 4h7A1.5 1.5 0 0 1 17 5.5V7" stroke="currentColor" stroke-width="1.8"/></svg><span class="side-nav__tooltip">Leistungen</span></a></li>
+          <li><a href="jobangebote.html"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="7" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7" stroke="currentColor" stroke-width="1.8"/><path d="M4 12h16" stroke="currentColor" stroke-width="1.8"/></svg><span class="side-nav__tooltip">Jobangebote</span></a></li>
+          <li><a href="gruengutannahme.html"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c3 3.2 4.5 6 4.5 8.5a4.5 4.5 0 1 1-9 0C7.5 9 9 6.2 12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span class="side-nav__tooltip">Grüngutannahme</span></a></li>
+          <li><a href="loisachtaler-erden.html"><svg viewBox="0 0 24 24" fill="none"><path d="M3 10h18l-1.4 9.2a2 2 0 0 1-2 1.8H6.4a2 2 0 0 1-2-1.8L3 10Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8"/></svg><span class="side-nav__tooltip">Loisachtaler Erden</span></a></li>
+          <li><a href="kontakt.html"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="side-nav__tooltip">Kontakt</span></a></li>
+      </ul>
+      <div class="side-nav__bottom">
+        <a class="side-nav__phone" href="tel:+491234567890" aria-label="Anrufen: 0123 456 789">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.36 2.3.56 3.5.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C11.6 21 3 12.4 3 2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.2.2 2.4.56 3.5a1 1 0 0 1-.25 1L6.6 10.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </nav>
 
-      <nav class="main-nav" data-nav data-open="false" aria-label="Hauptnavigation">
-        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="main-nav-list">
-          <span class="visually-hidden">Menü öffnen</span>
-          ☰
-        </button>
-        <ul class="main-nav__list" id="main-nav-list">
-          <li><a href="index.html" aria-current="page">Start</a></li>
-          <li><a href="leistungen.html">Leistungen</a></li>
-          <li><a href="ueber-uns.html">Über uns</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-        <a class="btn btn--primary main-nav__cta" href="kontakt.html">Angebot anfragen</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container hero__inner">
-        <div>
-          <span class="badge">Musterstadt &amp; Umgebung</span>
-          <h1>Zuverlässige Müllentsorgung für Haushalt &amp; Gewerbe</h1>
-          <p>
-            Ob Hausmüll, Sperrmüll, Gewerbeabfall oder Container-Service:
-            Schwaiger Entsorgung sorgt seit über 15 Jahren für saubere
-            Ergebnisse – termintreu, fair kalkuliert und ohne versteckte Kosten.
-          </p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="kontakt.html">Kostenlos anfragen</a>
-            <a class="btn btn--outline" href="leistungen.html">Leistungen ansehen</a>
+    <div class="main-area">
+      <main>
+        <section class="hero-split" style="padding-block:0;">
+          <div class="hero-split__panel hero-split__panel--dark"></div>
+          <div class="hero-split__panel hero-split__panel--accent"></div>
+          <div class="hero-split__art">
+            <svg viewBox="0 0 1200 480" width="100%" height="100%" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <line x1="0" y1="400" x2="1200" y2="400" stroke="#ffffff" stroke-width="3" stroke-dasharray="2 14" stroke-linecap="round" opacity="0.35"/>
+          <g transform="translate(60,70) scale(0.62)" opacity="0.5">
+            <rect x="150" y="120" width="260" height="150" rx="14" fill="#2b2b2b"/>
+            <path d="M150 120 L190 60 L330 60 L410 120 Z" fill="#2b2b2b"/>
+            <rect x="30" y="180" width="120" height="100" rx="10" fill="#ffffff"/>
+            <rect x="48" y="198" width="60" height="46" rx="6" fill="#e6621a"/>
+            <rect x="10" y="262" width="130" height="20" rx="6" fill="#2b2b2b"/>
+            <circle cx="95" cy="300" r="34" fill="#1a1a1a"/>
+            <circle cx="95" cy="300" r="12" fill="#ffffff"/>
+            <circle cx="350" cy="300" r="34" fill="#1a1a1a"/>
+            <circle cx="350" cy="300" r="12" fill="#ffffff"/>
+          </g>
+          <g transform="translate(360,40) scale(1)">
+            <rect x="150" y="120" width="300" height="170" rx="16" fill="#2b2b2b"/>
+            <path d="M150 120 L200 40 L360 40 L450 120 Z" fill="#2b2b2b"/>
+            <rect x="15" y="190" width="140" height="115" rx="12" fill="#ffffff"/>
+            <rect x="36" y="212" width="70" height="52" rx="8" fill="#e6621a"/>
+            <rect x="-15" y="288" width="150" height="24" rx="8" fill="#2b2b2b"/>
+            <circle cx="95" cy="332" r="42" fill="#1a1a1a"/>
+            <circle cx="95" cy="332" r="15" fill="#ffffff"/>
+            <circle cx="400" cy="332" r="42" fill="#1a1a1a"/>
+            <circle cx="400" cy="332" r="15" fill="#ffffff"/>
+            <g transform="translate(240,175)">
+              <path d="M20 0 A20 20 0 1 1 3 10" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+              <path d="M14 -6 L20 0 L12 4" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </g>
+        </svg>
           </div>
-
-          <div class="stat-row">
-            <div>
-              <strong>15+</strong>
-              <span>Jahre Erfahrung</span>
-            </div>
-            <div>
-              <strong>2.400+</strong>
-              <span>Abholungen pro Jahr</span>
-            </div>
-            <div>
-              <strong>24 Std.</strong>
-              <span>Express-Option</span>
+          <div class="hero-split__content">
+            <span class="hero-split__badge">Musterstadt &amp; Umgebung</span>
+            <h1>Entsorgung<br />Schwaiger</h1>
+            <p>Zuverlässige Müllentsorgung &amp; Container-Service für Haushalt &amp; Gewerbe – seit über 15 Jahren.</p>
+            <div class="hero__actions">
+              <a class="btn btn--white" href="kontakt.html">Kostenlos anfragen</a>
+              <a class="btn btn--outline-light" href="leistungen.html">Leistungen ansehen</a>
             </div>
           </div>
+        </section>
+
+        <div class="quick-links">
+          <a class="quick-links__card" href="ueber-uns.html">
+            <span class="quick-links__icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.8"/><path d="M5 20c1.2-4 4-6 7-6s5.8 2 7 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span><span class="quick-links__title">Über uns</span><br /><span class="quick-links__desc">Familienbetrieb seit 15+ Jahren</span></span>
+          </a>
+          <a class="quick-links__card" href="leistungen.html">
+            <span class="quick-links__icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="12" rx="1.5" stroke="currentColor" stroke-width="1.8"/><path d="M7 7V5.5A1.5 1.5 0 0 1 8.5 4h7A1.5 1.5 0 0 1 17 5.5V7" stroke="currentColor" stroke-width="1.8"/></svg></span>
+            <span><span class="quick-links__title">Leistungen</span><br /><span class="quick-links__desc">Alle Services im Überblick</span></span>
+          </a>
+          <a class="quick-links__card" href="jobangebote.html">
+            <span class="quick-links__icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="7" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7" stroke="currentColor" stroke-width="1.8"/><path d="M4 12h16" stroke="currentColor" stroke-width="1.8"/></svg></span>
+            <span><span class="quick-links__title">Jobangebote</span><br /><span class="quick-links__desc">Werde Teil des Teams</span></span>
+          </a>
+          <a class="quick-links__card" href="gruengutannahme.html">
+            <span class="quick-links__icon quick-links__icon--eco"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c3 3.2 4.5 6 4.5 8.5a4.5 4.5 0 1 1-9 0C7.5 9 9 6.2 12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+            <span><span class="quick-links__title">Grüngutannahme</span><br /><span class="quick-links__desc">Öffnungszeiten &amp; Preise</span></span>
+          </a>
+          <a class="quick-links__card" href="loisachtaler-erden.html">
+            <span class="quick-links__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 10h18l-1.4 9.2a2 2 0 0 1-2 1.8H6.4a2 2 0 0 1-2-1.8L3 10Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8"/></svg></span>
+            <span><span class="quick-links__title">Loisachtaler Erden</span><br /><span class="quick-links__desc">Unser Erden- &amp; Substratprodukt</span></span>
+          </a>
+          <a class="quick-links__card quick-links__card--dark" href="kontakt.html">
+            <span class="quick-links__icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span><span class="quick-links__title">Kontakt</span><br /><span class="quick-links__desc">Jetzt Angebot anfragen</span></span>
+          </a>
         </div>
 
-        <div class="hero__art">
-          <h3>Schnelle Anfrage</h3>
-          <p>Container-Größe, Termin und Adresse angeben – wir melden uns mit einem Festpreis zurück.</p>
-          <ul class="container-sizes" style="margin-top: var(--space-2);">
-            <li><strong>3 m³</strong>Mini-Container</li>
-            <li><strong>7 m³</strong>Standard</li>
-            <li><strong>10 m³</strong>Groß</li>
-          </ul>
-          <a class="btn btn--accent" style="margin-top: var(--space-3);" href="kontakt.html">Jetzt Container anfragen</a>
-        </div>
-      </div>
-    </section>
+        <section class="alt">
+          <div class="container">
+            <h2>Unsere Leistungen im Überblick</h2>
+            <p>Von der einmaligen Sperrmüllabholung bis zur laufenden Betreuung von Gewerbebetrieben.</p>
 
-    <section class="alt">
-      <div class="container">
-        <h2>Unsere Leistungen im Überblick</h2>
-        <p>Von der einmaligen Sperrmüllabholung bis zur laufenden Betreuung von Gewerbebetrieben.</p>
+            <div class="grid grid--3" style="margin-top: var(--space-3);">
+              <div class="card">
+                <svg class="card__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 7h14l-1.2 12.5A2 2 0 0 1 15.8 21H8.2a2 2 0 0 1-2-1.8L5 7Z" stroke="currentColor" stroke-width="1.8"/><path d="M3 7h18M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" stroke="currentColor" stroke-width="1.8"/></svg>
+                <h3>Hausmüll &amp; Sperrmüll</h3>
+                <p>Regelmäßige Abholung oder einmalige Entrümpelung – termingenau und ohne Stress.</p>
+              </div>
+              <div class="card">
+                <svg class="card__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="1.5" stroke="currentColor" stroke-width="1.8"/><path d="M7 7V5.5A1.5 1.5 0 0 1 8.5 4h7A1.5 1.5 0 0 1 17 5.5V7" stroke="currentColor" stroke-width="1.8"/></svg>
+                <h3>Container-Service</h3>
+                <p>Container in verschiedenen Größen für Bau-, Garten- und Renovierungsabfälle.</p>
+              </div>
+              <div class="card">
+                <svg class="card__icon card__icon--eco" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.5-5.8M20 12a8 8 0 0 1-13.5 5.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M15 4.5 17.5 6.2 15.8 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 19.5 6.5 17.8 8.2 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <h3>Recycling &amp; Wertstoffe</h3>
+                <p>Fachgerechte Trennung und Verwertung – umweltfreundlich und dokumentiert.</p>
+              </div>
+            </div>
 
-        <div class="grid grid--3" style="margin-top: var(--space-3);">
-          <div class="card">
-            <svg class="card__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 7h14l-1.2 12.5A2 2 0 0 1 15.8 21H8.2a2 2 0 0 1-2-1.8L5 7Z" stroke="currentColor" stroke-width="1.8"/><path d="M3 7h18M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" stroke="currentColor" stroke-width="1.8"/></svg>
-            <h3>Hausmüll &amp; Sperrmüll</h3>
-            <p>Regelmäßige Abholung oder einmalige Entrümpelung – termingenau und ohne Stress.</p>
+            <p style="margin-top: var(--space-3);"><a href="leistungen.html">Alle Leistungen im Detail →</a></p>
           </div>
-          <div class="card">
-            <svg class="card__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="1.5" stroke="currentColor" stroke-width="1.8"/><path d="M7 7V5.5A1.5 1.5 0 0 1 8.5 4h7A1.5 1.5 0 0 1 17 5.5V7" stroke="currentColor" stroke-width="1.8"/></svg>
-            <h3>Container-Service</h3>
-            <p>Container in verschiedenen Größen für Bau-, Garten- und Renovierungsabfälle.</p>
+        </section>
+
+        <section>
+          <div class="container">
+            <h2>So einfach geht's</h2>
+            <ul class="process-steps">
+              <li><h3>Anfragen</h3><p>Kurzes Formular ausfüllen oder anrufen – Abfallart, Menge und Wunschtermin nennen.</p></li>
+              <li><h3>Angebot erhalten</h3><p>Wir kalkulieren einen fairen Festpreis, meist noch am selben Tag.</p></li>
+              <li><h3>Abholen lassen</h3><p>Wir liefern, holen ab oder stellen den Container pünktlich bereit.</p></li>
+            </ul>
           </div>
-          <div class="card">
-            <svg class="card__icon card__icon--eco" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.5-5.8M20 12a8 8 0 0 1-13.5 5.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M15 4.5 17.5 6.2 15.8 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 19.5 6.5 17.8 8.2 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <h3>Recycling &amp; Wertstoffe</h3>
-            <p>Fachgerechte Trennung und Verwertung – umweltfreundlich und dokumentiert.</p>
+        </section>
+
+        <section class="alt">
+          <div class="container">
+            <div class="cta-band">
+              <div>
+                <h2>Bereit für eine unkomplizierte Entsorgung?</h2>
+                <p>Jetzt Kontakt aufnehmen und in wenigen Minuten ein Angebot erhalten.</p>
+              </div>
+              <a class="btn btn--accent" href="kontakt.html">Kontakt aufnehmen</a>
+            </div>
           </div>
-        </div>
-
-        <p style="margin-top: var(--space-3);"><a href="leistungen.html">Alle Leistungen im Detail →</a></p>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <h2>So einfach geht's</h2>
-        <ul class="process-steps">
-          <li><h3>Anfragen</h3><p>Kurzes Formular ausfüllen oder anrufen – Abfallart, Menge und Wunschtermin nennen.</p></li>
-          <li><h3>Angebot erhalten</h3><p>Wir kalkulieren einen fairen Festpreis, meist noch am selben Tag.</p></li>
-          <li><h3>Abholen lassen</h3><p>Wir liefern, holen ab oder stellen den Container pünktlich bereit.</p></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="alt">
-      <div class="container">
-        <div class="cta-band">
+        </section>
+      </main>
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
           <div>
-            <h2>Bereit für eine unkomplizierte Entsorgung?</h2>
-            <p>Jetzt Kontakt aufnehmen und in wenigen Minuten ein Angebot erhalten.</p>
+            <h3>Schwaiger Entsorgung</h3>
+            <p>Ihr Partner für Haus-, Gewerbe- und Sperrmüllentsorgung in Musterstadt und Umgebung.</p>
           </div>
-          <a class="btn btn--accent" href="kontakt.html">Kontakt aufnehmen</a>
+          <div>
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="index.html">Start</a></li>
+              <li><a href="ueber-uns.html">Über uns</a></li>
+              <li><a href="leistungen.html">Leistungen</a></li>
+              <li><a href="jobangebote.html">Jobangebote</a></li>
+              <li><a href="gruengutannahme.html">Grüngutannahme</a></li>
+              <li><a href="loisachtaler-erden.html">Loisachtaler Erden</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Kontakt</h3>
+            <ul>
+              <li>Musterstraße 12, 12345 Musterstadt</li>
+              <li><a href="tel:+491234567890">0123 456 789</a></li>
+              <li><a href="mailto:info@schwaiger-entsorgung.de">info@schwaiger-entsorgung.de</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <div>
-        <h3>Schwaiger Entsorgung</h3>
-        <p>Ihr Partner für Haus-, Gewerbe- und Sperrmüllentsorgung in Musterstadt und Umgebung.</p>
-      </div>
-      <div>
-        <h3>Navigation</h3>
-        <ul>
-          <li><a href="index.html">Start</a></li>
-          <li><a href="leistungen.html">Leistungen</a></li>
-          <li><a href="ueber-uns.html">Über uns</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Kontakt</h3>
-        <ul>
-          <li>Musterstraße 12, 12345 Musterstadt</li>
-          <li><a href="tel:+491234567890">0123 456 789</a></li>
-          <li><a href="mailto:info@schwaiger-entsorgung.de">info@schwaiger-entsorgung.de</a></li>
-        </ul>
-      </div>
+        <div class="site-footer__bottom">
+          <div class="container">
+            <span>© <span id="year">2026</span> Schwaiger Entsorgung</span>
+            <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+          </div>
+        </div>
+      </footer>
     </div>
-    <div class="site-footer__bottom">
-      <div class="container">
-        <span>© <span id="year">2026</span> Schwaiger Entsorgung</span>
-        <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
-      </div>
-    </div>
-  </footer>
+  </div>
 
   <script src="js/nav.js" defer></script>
 </body>

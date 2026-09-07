@@ -1,97 +1,222 @@
 /*
   layout.css
-  Header, Navigation, Footer, Grundraster.
+  App-Shell, linke Sidebar-Navigation, Footer, Grundraster.
   Setzt nur base.css voraus (CSS-Variablen). Kennt keine components/pages.
 */
 
-.site-header {
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-area {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Sidebar (Desktop: schmale Icon-Leiste links) ---------- */
+
+.side-nav {
+  width: 76px;
+  min-width: 76px;
+  flex-shrink: 0;
+  background: var(--color-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  gap: 4px;
   position: sticky;
   top: 0;
+  height: 100vh;
   z-index: 50;
-  background: var(--color-bg);
-  border-bottom: 1px solid var(--color-border);
 }
 
-.site-header__inner {
+.side-nav__logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--color-primary);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-block: var(--space-2);
+  justify-content: center;
+  flex-shrink: 0;
+  margin-bottom: 28px;
 }
 
-.brand {
+.side-nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  flex: 1;
+}
+
+.side-nav__list a {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: var(--space-1);
-  font-weight: 700;
-  font-size: 1.15rem;
-  color: var(--color-ink);
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  color: #c9c7c4;
 }
 
-.brand:hover {
+.side-nav__list a:hover,
+.side-nav__list a:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
   text-decoration: none;
 }
 
-.brand__mark {
-  width: 34px;
-  height: 34px;
+.side-nav__list svg {
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
 }
 
-.main-nav {
+.side-nav__list a[aria-current="page"] {
+  background: rgba(230, 98, 26, 0.18);
+  color: var(--color-primary);
+}
+
+.side-nav__list a[aria-current="page"]::before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 22px;
+  border-radius: 2px;
+  background: var(--color-primary);
+}
+
+.side-nav__tooltip {
+  position: absolute;
+  left: 56px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-6px);
+  background: #1a1a1a;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.side-nav__list a:hover .side-nav__tooltip,
+.side-nav__list a:focus-visible .side-nav__tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+.side-nav__bottom {
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+.side-nav__phone {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #3a3a3a;
   display: flex;
   align-items: center;
-  gap: var(--space-4);
-}
-
-.main-nav__list {
-  display: flex;
-  gap: var(--space-3);
-}
-
-.main-nav__list a {
-  color: var(--color-ink);
-  font-weight: 500;
-}
-
-.main-nav__list a[aria-current="page"] {
+  justify-content: center;
   color: var(--color-primary);
 }
 
 .nav-toggle {
   display: none;
   background: none;
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: 0.4rem 0.6rem;
+  border: none;
+  color: #ffffff;
+  padding: 0.4rem;
   cursor: pointer;
 }
 
-@media (max-width: 780px) {
+/* ---------- Mobile: obere Leiste + ausklappbares Menü ---------- */
+
+@media (max-width: 900px) {
+  .app-shell {
+    flex-direction: column;
+  }
+
+  .side-nav {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    position: sticky;
+    top: 0;
+  }
+
+  .side-nav__logo {
+    margin-bottom: 0;
+  }
+
   .nav-toggle {
     display: inline-flex;
   }
 
-  .main-nav__list {
+  .side-nav__list {
     position: absolute;
     inset-inline: 0;
     top: 100%;
     flex-direction: column;
-    background: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
+    align-items: stretch;
+    background: var(--color-dark);
     padding: var(--space-2);
-    gap: var(--space-2);
+    gap: 2px;
     display: none;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
   }
 
-  .main-nav[data-open="true"] .main-nav__list {
+  .side-nav[data-open="true"] .side-nav__list {
     display: flex;
   }
 
-  .main-nav .btn.main-nav__cta {
+  .side-nav__list a {
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    gap: 14px;
+    padding: 12px 14px;
+  }
+
+  .side-nav__list a[aria-current="page"]::before {
+    display: none;
+  }
+
+  .side-nav__tooltip {
+    position: static;
+    opacity: 1;
+    transform: none;
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .side-nav__bottom {
     display: none;
   }
 }
+
+/* ---------- Footer ---------- */
 
 .site-footer {
   background: var(--color-dark);

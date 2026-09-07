@@ -3,52 +3,174 @@
   Setzt base.css + layout.css + components.css voraus.
 */
 
-.hero {
-  padding-block: var(--space-5);
-  background:
-    linear-gradient(120deg, rgba(31, 111, 74, 0.06), rgba(242, 169, 0, 0.06));
+/* ---------- Diagonal-Hero mit Fuhrpark-Illustration ---------- */
+
+.hero-split {
+  position: relative;
+  width: 100%;
+  min-height: 460px;
+  overflow: hidden;
 }
 
-.hero__inner {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: var(--space-4);
-  align-items: center;
+.hero-split__panel {
+  position: absolute;
+  inset: 0;
 }
 
-.hero__actions {
+.hero-split__panel--dark {
+  background: var(--color-dark);
+  clip-path: polygon(0 0, 63% 0, 51% 100%, 0 100%);
+}
+
+.hero-split__panel--accent {
+  background: var(--color-primary);
+  clip-path: polygon(63% 0, 100% 0, 100% 100%, 51% 100%);
+}
+
+.hero-split__art {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 46%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-split__content {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  padding: 72px var(--space-2) 60px;
+  margin-inline: var(--space-2);
+}
+
+.hero-split__content h1 {
+  color: #ffffff;
+  font-size: clamp(2.1rem, 4vw, 2.9rem);
+  line-height: 1.08;
+  margin-bottom: var(--space-2);
+}
+
+.hero-split__content p {
+  color: #d9d7d4;
+  max-width: 440px;
+}
+
+.hero-split .hero__actions {
   display: flex;
   gap: var(--space-2);
   flex-wrap: wrap;
   margin-top: var(--space-3);
 }
 
-.hero__art {
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: var(--space-3);
+.hero-split__badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: var(--space-2);
 }
 
-.stat-row {
+/* ---------- Quick-Link-Kacheln (überlappen den Hero-Rand) ---------- */
+
+.quick-links {
+  position: relative;
+  margin-top: -40px;
+  z-index: 3;
+  padding-inline: var(--space-2);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-2);
-  text-align: center;
-  margin-top: var(--space-4);
 }
 
-.stat-row strong {
-  display: block;
-  font-size: 1.9rem;
+.quick-links__card {
+  background: var(--color-bg);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: var(--space-2) var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quick-links__icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quick-links__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.quick-links__icon--eco {
+  background: var(--color-eco-light);
+  color: var(--color-eco);
+}
+
+.quick-links__title {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--color-ink);
+}
+
+.quick-links__desc {
+  font-size: 0.78rem;
+  color: var(--color-ink-soft);
+}
+
+.quick-links__card--dark {
+  background: var(--color-dark);
+}
+
+.quick-links__card--dark .quick-links__title {
+  color: #ffffff;
+}
+
+.quick-links__card--dark .quick-links__desc {
+  color: #c9c7c4;
+}
+
+.quick-links__card--dark .quick-links__icon {
+  background: #3a3a3a;
   color: var(--color-primary);
 }
 
-.stat-row span {
-  color: var(--color-ink-soft);
-  font-size: 0.9rem;
+@media (max-width: 860px) {
+  .quick-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+@media (max-width: 560px) {
+  .quick-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 780px) {
+  .hero-split__art {
+    opacity: 0.3;
+  }
+
+  .hero-split__content {
+    padding-top: 48px;
+  }
+}
+
+/* ---------- übrige Startseiten-Bausteine ---------- */
 
 .process-steps {
   counter-reset: step;
@@ -96,10 +218,4 @@
 .cta-band p {
   color: #fff;
   margin: 0;
-}
-
-@media (max-width: 860px) {
-  .hero__inner {
-    grid-template-columns: 1fr;
-  }
 }

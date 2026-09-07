@@ -13,151 +13,155 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a class="brand" href="index.html">
-        <svg class="brand__mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="4" y="4" width="40" height="40" rx="10" fill="#e6621a"/>
-          <path d="M17 18h14l-1.4 16.2a2 2 0 0 1-2 1.8H20.4a2 2 0 0 1-2-1.8L17 18Z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
-          <path d="M15 18h18M20 18v-2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M21 22v9M27 22v9" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        Schwaiger Entsorgung
+  <div class="app-shell">
+    <nav class="side-nav" data-nav data-open="false" aria-label="Hauptnavigation">
+      <a class="side-nav__logo" href="index.html" aria-label="Schwaiger Entsorgung – Start">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 7h12l-1.2 13.2A2 2 0 0 1 14.8 22H9.2a2 2 0 0 1-2-1.8L6 7Z" stroke="#fff" stroke-width="1.9" stroke-linejoin="round"/><path d="M4 7h16M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/></svg>
       </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="side-nav-list">
+        <span class="visually-hidden">Menü öffnen</span>
+        ☰
+      </button>
+      <ul class="side-nav__list" id="side-nav-list">
+          <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 4l8 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span class="side-nav__tooltip">Start</span></a></li>
+          <li><a href="ueber-uns.html"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.8"/><path d="M5 20c1.2-4 4-6 7-6s5.8 2 7 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="side-nav__tooltip">Über uns</span></a></li>
+          <li><a href="leistungen.html"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="12" rx="1.5" stroke="currentColor" stroke-width="1.8"/><path d="M7 7V5.5A1.5 1.5 0 0 1 8.5 4h7A1.5 1.5 0 0 1 17 5.5V7" stroke="currentColor" stroke-width="1.8"/></svg><span class="side-nav__tooltip">Leistungen</span></a></li>
+          <li><a href="jobangebote.html"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="7" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7" stroke="currentColor" stroke-width="1.8"/><path d="M4 12h16" stroke="currentColor" stroke-width="1.8"/></svg><span class="side-nav__tooltip">Jobangebote</span></a></li>
+          <li><a href="gruengutannahme.html"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c3 3.2 4.5 6 4.5 8.5a4.5 4.5 0 1 1-9 0C7.5 9 9 6.2 12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span class="side-nav__tooltip">Grüngutannahme</span></a></li>
+          <li><a href="loisachtaler-erden.html"><svg viewBox="0 0 24 24" fill="none"><path d="M3 10h18l-1.4 9.2a2 2 0 0 1-2 1.8H6.4a2 2 0 0 1-2-1.8L3 10Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8"/></svg><span class="side-nav__tooltip">Loisachtaler Erden</span></a></li>
+          <li><a href="kontakt.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="side-nav__tooltip">Kontakt</span></a></li>
+      </ul>
+      <div class="side-nav__bottom">
+        <a class="side-nav__phone" href="tel:+491234567890" aria-label="Anrufen: 0123 456 789">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.36 2.3.56 3.5.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C11.6 21 3 12.4 3 2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.2.2 2.4.56 3.5a1 1 0 0 1-.25 1L6.6 10.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </nav>
 
-      <nav class="main-nav" data-nav data-open="false" aria-label="Hauptnavigation">
-        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="main-nav-list">
-          <span class="visually-hidden">Menü öffnen</span>
-          ☰
-        </button>
-        <ul class="main-nav__list" id="main-nav-list">
-          <li><a href="index.html">Start</a></li>
-          <li><a href="leistungen.html">Leistungen</a></li>
-          <li><a href="ueber-uns.html">Über uns</a></li>
-          <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
-        </ul>
-        <a class="btn btn--primary main-nav__cta" href="kontakt.html">Angebot anfragen</a>
-      </nav>
-    </div>
-  </header>
+    <div class="main-area">
+      <main>
+        <section>
+          <div class="container">
+            <span class="badge">Kontakt</span>
+            <h1>Sprechen Sie mit uns</h1>
+            <p>Rufen Sie an, schreiben Sie eine E-Mail oder nutzen Sie das Formular – wir melden uns in der Regel innerhalb eines Werktags.</p>
 
-  <main>
-    <section>
-      <div class="container">
-        <span class="badge">Kontakt</span>
-        <h1>Sprechen Sie mit uns</h1>
-        <p>Rufen Sie an, schreiben Sie eine E-Mail oder nutzen Sie das Formular – wir melden uns in der Regel innerhalb eines Werktags.</p>
+            <div class="contact-grid" style="margin-top: var(--space-4);">
+              <div>
+                <h2>Kontaktdaten</h2>
+                <ul class="contact-info__list">
+                  <li class="contact-info__item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.36 2.3.56 3.5.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C11.6 21 3 12.4 3 2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.2.2 2.4.56 3.5a1 1 0 0 1-.25 1L6.6 10.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                    <a href="tel:+491234567890">0123 456 789</a>
+                  </li>
+                  <li class="contact-info__item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <a href="mailto:info@schwaiger-entsorgung.de">info@schwaiger-entsorgung.de</a>
+                  </li>
+                  <li class="contact-info__item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.3" stroke="currentColor" stroke-width="1.6"/></svg>
+                    <span>Musterstraße 12, 12345 Musterstadt</span>
+                  </li>
+                  <li class="contact-info__item">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>Mo–Fr: 7:00–17:00 Uhr, Sa: 8:00–12:00 Uhr</span>
+                  </li>
+                </ul>
 
-        <div class="contact-grid" style="margin-top: var(--space-4);">
-          <div>
-            <h2>Kontaktdaten</h2>
-            <ul class="contact-info__list">
-              <li class="contact-info__item">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.36 2.3.56 3.5.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C11.6 21 3 12.4 3 2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.2.2 2.4.56 3.5a1 1 0 0 1-.25 1L6.6 10.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-                <a href="tel:+491234567890">0123 456 789</a>
-              </li>
-              <li class="contact-info__item">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <a href="mailto:info@schwaiger-entsorgung.de">info@schwaiger-entsorgung.de</a>
-              </li>
-              <li class="contact-info__item">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.3" stroke="currentColor" stroke-width="1.6"/></svg>
-                <span>Musterstraße 12, 12345 Musterstadt</span>
-              </li>
-              <li class="contact-info__item">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span>Mo–Fr: 7:00–17:00 Uhr, Sa: 8:00–12:00 Uhr</span>
-              </li>
-            </ul>
+                <div class="map-placeholder">
+                  Kartenansicht folgt – Google-Maps-Einbindung kann hier später ergänzt werden.
+                </div>
+              </div>
 
-            <div class="map-placeholder">
-              Kartenansicht folgt – Google-Maps-Einbindung kann hier später ergänzt werden.
+              <div>
+                <h2>Anfrage senden</h2>
+                <form data-contact-form novalidate>
+                  <div class="field" data-field data-error="false">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required />
+                    <span class="field__error">Bitte geben Sie Ihren Namen an.</span>
+                  </div>
+
+                  <div class="field" data-field data-error="false">
+                    <label for="email">E-Mail *</label>
+                    <input type="email" id="email" name="email" required />
+                    <span class="field__error">Bitte geben Sie eine gültige E-Mail-Adresse an.</span>
+                  </div>
+
+                  <div class="field" data-field data-error="false">
+                    <label for="telefon">Telefon</label>
+                    <input type="tel" id="telefon" name="telefon" />
+                    <small>Optional, für Rückfragen</small>
+                  </div>
+
+                  <div class="field" data-field data-error="false">
+                    <label for="leistung">Gewünschte Leistung *</label>
+                    <select id="leistung" name="leistung" required>
+                      <option value="">Bitte wählen</option>
+                      <option value="hausmuell">Hausmüll / Gewerbeabfall</option>
+                      <option value="sperrmuell">Sperrmüll / Entrümpelung</option>
+                      <option value="container">Container-Service</option>
+                      <option value="recycling">Recycling / Wertstoffe</option>
+                      <option value="gruengut">Grüngutannahme</option>
+                      <option value="erden">Loisachtaler Erden</option>
+                      <option value="job">Jobangebote</option>
+                      <option value="sonstiges">Sonstiges</option>
+                    </select>
+                    <span class="field__error">Bitte wählen Sie eine Leistung aus.</span>
+                  </div>
+
+                  <div class="field" data-field data-error="false">
+                    <label for="nachricht">Nachricht *</label>
+                    <textarea id="nachricht" name="nachricht" rows="5" required></textarea>
+                    <span class="field__error">Bitte geben Sie eine kurze Nachricht ein.</span>
+                  </div>
+
+                  <button class="btn btn--primary" type="submit">Anfrage absenden</button>
+
+                  <div class="form-status" data-form-status role="status" aria-live="polite"></div>
+                </form>
+              </div>
             </div>
           </div>
-
+        </section>
+      </main>
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
           <div>
-            <h2>Anfrage senden</h2>
-            <form data-contact-form novalidate>
-              <div class="field" data-field data-error="false">
-                <label for="name">Name *</label>
-                <input type="text" id="name" name="name" required />
-                <span class="field__error">Bitte geben Sie Ihren Namen an.</span>
-              </div>
-
-              <div class="field" data-field data-error="false">
-                <label for="email">E-Mail *</label>
-                <input type="email" id="email" name="email" required />
-                <span class="field__error">Bitte geben Sie eine gültige E-Mail-Adresse an.</span>
-              </div>
-
-              <div class="field" data-field data-error="false">
-                <label for="telefon">Telefon</label>
-                <input type="tel" id="telefon" name="telefon" />
-                <small>Optional, für Rückfragen</small>
-              </div>
-
-              <div class="field" data-field data-error="false">
-                <label for="leistung">Gewünschte Leistung *</label>
-                <select id="leistung" name="leistung" required>
-                  <option value="">Bitte wählen</option>
-                  <option value="hausmuell">Hausmüll / Gewerbeabfall</option>
-                  <option value="sperrmuell">Sperrmüll / Entrümpelung</option>
-                  <option value="container">Container-Service</option>
-                  <option value="recycling">Recycling / Wertstoffe</option>
-                  <option value="sonstiges">Sonstiges</option>
-                </select>
-                <span class="field__error">Bitte wählen Sie eine Leistung aus.</span>
-              </div>
-
-              <div class="field" data-field data-error="false">
-                <label for="nachricht">Nachricht *</label>
-                <textarea id="nachricht" name="nachricht" rows="5" required></textarea>
-                <span class="field__error">Bitte geben Sie eine kurze Nachricht ein.</span>
-              </div>
-
-              <button class="btn btn--primary" type="submit">Anfrage absenden</button>
-
-              <div class="form-status" data-form-status role="status" aria-live="polite"></div>
-            </form>
+            <h3>Schwaiger Entsorgung</h3>
+            <p>Ihr Partner für Haus-, Gewerbe- und Sperrmüllentsorgung in Musterstadt und Umgebung.</p>
+          </div>
+          <div>
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="index.html">Start</a></li>
+              <li><a href="ueber-uns.html">Über uns</a></li>
+              <li><a href="leistungen.html">Leistungen</a></li>
+              <li><a href="jobangebote.html">Jobangebote</a></li>
+              <li><a href="gruengutannahme.html">Grüngutannahme</a></li>
+              <li><a href="loisachtaler-erden.html">Loisachtaler Erden</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Kontakt</h3>
+            <ul>
+              <li>Musterstraße 12, 12345 Musterstadt</li>
+              <li><a href="tel:+491234567890">0123 456 789</a></li>
+              <li><a href="mailto:info@schwaiger-entsorgung.de">info@schwaiger-entsorgung.de</a></li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <div>
-        <h3>Schwaiger Entsorgung</h3>
-        <p>Ihr Partner für Haus-, Gewerbe- und Sperrmüllentsorgung in Musterstadt und Umgebung.</p>
-      </div>
-      <div>
-        <h3>Navigation</h3>
-        <ul>
-          <li><a href="index.html">Start</a></li>
-          <li><a href="leistungen.html">Leistungen</a></li>
-          <li><a href="ueber-uns.html">Über uns</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Kontakt</h3>
-        <ul>
-          <li>Musterstraße 12, 12345 Musterstadt</li>
-          <li><a href="tel:+491234567890">0123 456 789</a></li>
-          <li><a href="mailto:info@schwaiger-entsorgung.de">info@schwaiger-entsorgung.de</a></li>
-        </ul>
-      </div>
+        <div class="site-footer__bottom">
+          <div class="container">
+            <span>© <span id="year">2026</span> Schwaiger Entsorgung</span>
+            <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+          </div>
+        </div>
+      </footer>
     </div>
-    <div class="site-footer__bottom">
-      <div class="container">
-        <span>© <span id="year">2026</span> Schwaiger Entsorgung</span>
-        <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
-      </div>
-    </div>
-  </footer>
+  </div>
 
   <script src="js/nav.js" defer></script>
-  <script src="js/kontakt.js" defer></script>
 </body>
 </html>
