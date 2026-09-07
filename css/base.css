@@ -1,0 +1,113 @@
+/*
+  base.css
+  Grundlagen: CSS-Variablen, Reset, Typografie.
+  Wird auf JEDER Seite geladen. Kennt keine anderen Module.
+*/
+
+:root {
+  /* Farben */
+  --color-primary: #1f6f4a;      /* Tannengrün – Entsorgung/Recycling */
+  --color-primary-dark: #165236;
+  --color-primary-light: #e7f3ec;
+  --color-accent: #f2a900;       /* Warngelb – Container/Baustelle */
+  --color-ink: #1c2422;
+  --color-ink-soft: #4a5551;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5f7f6;
+  --color-border: #dde3e0;
+  --color-danger: #b3261e;
+
+  /* Typografie */
+  --font-base: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-size-base: 1rem;
+  --line-height-base: 1.6;
+
+  /* Abstände */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+
+  /* Sonstiges */
+  --radius: 10px;
+  --shadow: 0 6px 20px rgba(28, 36, 34, 0.08);
+  --max-width: 1120px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-ink);
+  background: var(--color-bg);
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  margin: 0 0 var(--space-2);
+  color: var(--color-ink);
+}
+
+h1 { font-size: clamp(2rem, 4vw, 2.75rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); }
+h3 { font-size: 1.25rem; }
+
+p {
+  margin: 0 0 var(--space-2);
+  color: var(--color-ink-soft);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-2);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
