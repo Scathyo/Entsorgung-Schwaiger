@@ -39,8 +39,22 @@
 }
 
 .btn--accent {
-  background: var(--color-accent);
-  color: var(--color-ink);
+  background: var(--color-dark);
+  color: #ffffff;
+}
+
+.btn--accent:hover {
+  background: #1a1a1a;
+}
+
+/* Grüner Akzent – bewusst sparsam, nur für Recycling/Umwelt-Inhalte */
+.card__icon.card__icon--eco {
+  color: var(--color-eco);
+}
+
+.badge--eco {
+  background: var(--color-eco-light);
+  color: var(--color-eco);
 }
 
 .card {

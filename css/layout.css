@@ -94,18 +94,23 @@
 }
 
 .site-footer {
-  background: var(--color-primary-dark);
-  color: #eaf3ee;
+  background: var(--color-dark);
+  color: #f3f2f1;
   margin-top: var(--space-5);
 }
 
 .site-footer a {
-  color: #eaf3ee;
+  color: #ffffff;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: var(--color-primary);
 }
 
 .site-footer p,
 .site-footer li {
-  color: #cfe1d6;
+  color: #c7c5c2;
 }
 
 .site-footer__inner {
@@ -126,7 +131,7 @@
   padding-block: var(--space-2);
   font-size: 0.85rem;
   text-align: center;
-  color: #cfe1d6;
+  color: #cfcdca;
 }
 
 .site-footer__bottom .container {

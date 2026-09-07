@@ -29,6 +29,11 @@
   font-weight: 700;
 }
 
+/* Grüner Akzent – nur beim Recycling-Abschnitt */
+.service-detail--eco .service-detail__list li::before {
+  color: var(--color-eco);
+}
+
 .container-sizes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));

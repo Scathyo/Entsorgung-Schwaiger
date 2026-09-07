@@ -6,15 +6,17 @@
 
 :root {
   /* Farben */
-  --color-primary: #1f6f4a;      /* Tannengrün – Entsorgung/Recycling */
-  --color-primary-dark: #165236;
-  --color-primary-light: #e7f3ec;
-  --color-accent: #f2a900;       /* Warngelb – Container/Baustelle */
-  --color-ink: #1c2422;
-  --color-ink-soft: #4a5551;
+  --color-primary: #e6621a;      /* Signal-Orange – Entsorgung/Container */
+  --color-primary-dark: #b84d13; /* dunkleres Orange – Hover-Zustände */
+  --color-primary-light: #fdece0;
+  --color-dark: #2b2b2b;         /* Graphit/Anthrazit – zweite Markenfarbe */
+  --color-eco: #2f8f5b;          /* Grün – bewusst nur für Recycling-Akzente */
+  --color-eco-light: #e8f3ec;
+  --color-ink: #201f1e;
+  --color-ink-soft: #55524f;
   --color-bg: #ffffff;
-  --color-bg-alt: #f5f7f6;
-  --color-border: #dde3e0;
+  --color-bg-alt: #f6f5f3;
+  --color-border: #e2ded9;
   --color-danger: #b3261e;
 
   /* Typografie */
